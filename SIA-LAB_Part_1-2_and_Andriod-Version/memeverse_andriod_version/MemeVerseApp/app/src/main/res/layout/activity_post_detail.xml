@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <ImageView android:id="@+id/ivPostImage" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:scaleType="fitCenter"
+            android:adjustViewBounds="true" android:src="@drawable/ic_placeholder"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/ivAvatar"
+                android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_default_avatar" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                <TextView android:id="@+id/tvUsername" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvTime" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_muted" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvCategory" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:background="@drawable/category_badge"
+                android:paddingVertical="6dp" android:paddingHorizontal="12dp" android:textSize="12sp"
+                android:textColor="@color/primary" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvTitle" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="20sp" android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+        <TextView android:id="@+id/tvDescription" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="14sp"
+            android:textColor="@color/text_secondary" android:layout_marginTop="8dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="16dp" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:background="@drawable/vote_group_bg" android:padding="4dp">
+                <Button android:id="@+id/btnUpvote" style="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="48dp" android:layout_height="48dp" android:text="👍" android:textSize="20sp" />
+                <TextView android:id="@+id/tvVoteScore" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="0" android:textSize="16sp" android:padding="8dp" />
+                <Button android:id="@+id/btnDownvote" style="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="48dp" android:layout_height="48dp" android:text="👎" android:textSize="20sp" />
+            </LinearLayout>
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+            <Button android:id="@+id/btnEdit" style="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Edit"
+                android:visibility="gone" />
+            <Button android:id="@+id/btnDelete" style="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete"
+                android:textColor="@color/danger" android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Comments" android:textSize="18sp" android:textStyle="bold"
+            android:layout_marginTop="24dp" android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvComments"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/etComment" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Add a comment..."
+            android:background="@drawable/edittext_bg" android:padding="12dp" android:layout_marginTop="16dp" />
+
+        <Button android:id="@+id/btnPostComment" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Post Comment"
+            android:background="@drawable/btn_primary" android:textColor="@android:color/white"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>

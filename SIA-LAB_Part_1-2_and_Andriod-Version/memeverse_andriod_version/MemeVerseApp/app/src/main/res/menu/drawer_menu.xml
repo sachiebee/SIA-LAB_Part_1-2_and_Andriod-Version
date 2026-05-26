@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all"
+            android:title="All Memes" />
+        <item
+            android:id="@+id/nav_trending"
+            android:title="Trending" />
+        <item
+            android:id="@+id/nav_latest"
+            android:title="Latest" />
+    </group>
+
+    <item android:title="Categories">
+        <menu>
+            <item
+                android:id="@+id/cat_funny"
+                android:title="Funny" />
+            <item
+                android:id="@+id/cat_animals"
+                android:title="Animals" />
+            <item
+                android:id="@+id/cat_music"
+                android:title="Music" />
+            <item
+                android:id="@+id/cat_movies"
+                android:title="Movies" />
+            <item
+                android:id="@+id/cat_gaming"
+                android:title="Gaming" />
+            <item
+                android:id="@+id/cat_food"
+                android:title="Food" />
+            <item
+                android:id="@+id/cat_travel"
+                android:title="Travel" />
+            <item
+                android:id="@+id/cat_awesome"
+                android:title="Awesome" />
+        </menu>
+    </item>
+
+    <item android:title="Actions">
+        <menu>
+            <item
+                android:id="@+id/nav_upload"
+                android:title="Upload Meme" />
+            <item
+                android:id="@+id/nav_messages"
+                android:title="Messages" />
+            <item
+                android:id="@+id/nav_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>

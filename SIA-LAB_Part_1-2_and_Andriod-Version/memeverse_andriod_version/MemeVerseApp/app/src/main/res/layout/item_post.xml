@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@color/surface"
+    android:layout_margin="8dp" android:padding="12dp" android:elevation="2dp">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/ivAvatar"
+            android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_default_avatar" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:id="@+id/tvUsername" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="14sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+            <TextView android:id="@+id/tvTime" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_muted" />
+        </LinearLayout>
+        <TextView android:id="@+id/tvCategory" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:background="@drawable/category_badge"
+            android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:textSize="12sp"
+            android:textColor="@color/primary" />
+    </LinearLayout>
+
+    <!-- Image -->
+    <ImageView android:id="@+id/ivPostImage" android:layout_width="match_parent"
+        android:layout_height="200dp" android:layout_marginTop="12dp" android:scaleType="centerCrop"
+        android:src="@drawable/ic_placeholder" />
+
+    <!-- Title & Description -->
+    <TextView android:id="@+id/tvCaption" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="12dp" android:textSize="16sp"
+        android:textStyle="bold" android:textColor="@color/text_primary" />
+    <TextView android:id="@+id/tvDescription" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textSize="14sp"
+        android:textColor="@color/text_secondary" />
+    <TextView android:id="@+id/tvTags" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textSize="12sp"
+        android:textColor="@color/text_muted" />
+
+    <!-- Actions -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:orientation="horizontal" android:gravity="center_vertical">
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:background="@drawable/vote_group_bg"
+            android:paddingHorizontal="4dp">
+            <ImageButton android:id="@+id/btnUpvote" android:layout_width="32dp" android:layout_height="32dp"
+                android:src="@drawable/ic_arrow_up" android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/text_muted" />
+            <TextView android:id="@+id/tvVoteScore" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="0" android:textSize="14sp"
+                android:textColor="@color/text_primary" android:paddingHorizontal="8dp" />
+            <ImageButton android:id="@+id/btnDownvote" android:layout_width="32dp" android:layout_height="32dp"
+                android:src="@drawable/ic_arrow_down" android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/text_muted" />
+        </LinearLayout>
+
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <Button android:id="@+id/btnComments" style="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comments"
+                android:textSize="12sp" android:textColor="@color/text_secondary"
+                android:drawableStart="@drawable/ic_chat" android:drawablePadding="4dp" />
+            <TextView android:id="@+id/tvCommentCount" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="4dp" android:text="0"
+                android:textSize="12sp" android:textColor="@color/text_muted" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
